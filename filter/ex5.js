@@ -37,8 +37,14 @@ Exemple d'entrée:
  */
 
 function searchWordFilter(items, search) {
-  return items.filter(word => word.toLowerCase().includes(search));
+  const movies = items.filter((word) => {
+    if (word.toLowerCase().includes(search)){
+      return word;
+    }
+  });
+  return movies;
 }
+
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;
