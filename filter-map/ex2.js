@@ -25,8 +25,9 @@ Sortie attendue:
 */
 
 function getCampusesTeachingReact(campuses) {
-  return campuses.filter((element) => { element.curriculums.includes('JS/React')}).map((campus) => {
-    return campus.city
+  return campuses.filter((element) => { 
+    return element.curriculums[0] === 'JS/React' || element.curriculums[1] === 'JS/React'}).map((campus) => {
+      return campus.city
   })
 }
 
